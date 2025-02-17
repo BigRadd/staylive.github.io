@@ -10,24 +10,24 @@ body {
     position: relative;
 }
 
-/* Logo animado */
+/* Logo con efecto brillante */
 .logo {
     font-size: 150px;
     font-weight: bold;
     color: white;
     position: relative;
     z-index: 10;
-    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000;
+    text-shadow: 0 0 15px #ff0000, 0 0 30px #ff4500, 0 0 60px #ff4500;
     animation: glow 2s infinite alternate, moveUpDown 3s infinite ease-in-out;
 }
 
-/* Efecto de brillo */
+/* Brillo del logo */
 @keyframes glow {
     from {
-        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000;
+        text-shadow: 0 0 15px #ff0000, 0 0 30px #ff4500, 0 0 60px #ff4500;
     }
     to {
-        text-shadow: 0 0 20px #ff4500, 0 0 30px #ff4500, 0 0 60px #ff4500;
+        text-shadow: 0 0 25px #ff6347, 0 0 50px #ff4500, 0 0 80px #ff4500;
     }
 }
 
@@ -41,38 +41,39 @@ body {
     }
 }
 
-/* Corazones animados */
+/* Corazones con brillo y caída */
 .heart {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     background-color: red;
     clip-path: polygon(
-        50% 15%, 61% 5%, 75% 0, 89% 5%, 100% 20%, 95% 40%, 80% 60%, 
-        50% 90%, 20% 60%, 5% 40%, 0 20%, 11% 5%, 25% 0, 39% 5%
+        50% 10%, 61% 3%, 75% 0, 89% 3%, 100% 15%, 95% 35%, 80% 55%, 
+        50% 85%, 20% 55%, 5% 35%, 0 15%, 11% 3%, 25% 0, 39% 3%
     );
+    filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.8));
     animation: fall linear infinite, pulse 1.5s infinite ease-in-out;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
-/* Caída de los corazones */
+/* Efecto de caída fluida */
 @keyframes fall {
     from {
         transform: translateY(-10vh);
         opacity: 1;
     }
     to {
-        transform: translateY(110vh);
+        transform: translateY(110vh) rotate(360deg);
         opacity: 0;
     }
 }
 
-/* Latido */
+/* Efecto de latido */
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.2);
+        transform: scale(1.4);
     }
 }
