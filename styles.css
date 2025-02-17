@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+}
+
+.logo {
+    font-size: 150px; /* Tamaño grande */
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 30px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-10vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
