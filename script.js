@@ -3,7 +3,7 @@ function createHeart() {
     heart.classList.add("heart");
     document.body.appendChild(heart);
 
-    let size = Math.random() * 20 + 10; // Tamaño aleatorio
+    let size = Math.random() * 30 + 10; // Tamaño aleatorio
     heart.style.width = size + "px";
     heart.style.height = size + "px";
     heart.style.left = Math.random() * 100 + "vw";
@@ -14,6 +14,7 @@ function createHeart() {
     }, 5000);
 }
 
+// Crear corazones cada 200ms
 setInterval(createHeart, 200);
 
 // Reproducir la canción cuando la página carga
