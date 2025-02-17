@@ -1,25 +1,27 @@
 function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
-
     document.body.appendChild(heart);
 
-    let size = Math.random() * 20 + 10; // Tamaño aleatorio entre 10px y 30px
+    let size = Math.random() * 50 + 30; // Tamaño aleatorio entre 30px y 80px
     heart.style.width = size + "px";
     heart.style.height = size + "px";
-    heart.style.left = Math.random() * 100 + "vw"; // Posición horizontal aleatoria
-    heart.style.animationDuration = Math.random() * 3 + 2 + "s"; // Duración aleatoria de caída
+    heart.style.left = Math.random() * 100 + "vw"; // Posición aleatoria en todo el ancho
+    heart.style.animationDuration = Math.random() * 4 + 3 + "s"; // Duración entre 3 y 7s
+
+    // Pequeño giro para más realismo
+    heart.style.transform = `rotate(${Math.random() * 360}deg)`;
 
     // Remover corazones después de caer
     setTimeout(() => {
         heart.remove();
-    }, 5000);
+    }, 7000);
 }
 
-// Generar corazones cada 300 milisegundos
-setInterval(createHeart, 300);
+// Generar corazones cada 200ms
+setInterval(createHeart, 200);
 
-// Reproducir la canción automáticamente si es posible
+// Reproducir la canción cuando la página carga
 document.addEventListener("DOMContentLoaded", () => {
     const music = document.getElementById("music");
     music.play().catch(() => {
