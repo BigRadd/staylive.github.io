@@ -7,13 +7,10 @@ body {
     align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
-}
-
-.container {
     position: relative;
 }
 
-/* Logo brillante y animado */
+/* Logo animado */
 .logo {
     font-size: 150px;
     font-weight: bold;
@@ -58,7 +55,7 @@ body {
     opacity: 0.8;
 }
 
-/* Animación de caída */
+/* Caída de los corazones */
 @keyframes fall {
     from {
         transform: translateY(-10vh);
@@ -70,7 +67,7 @@ body {
     }
 }
 
-/* Animación de latido */
+/* Latido */
 @keyframes pulse {
     0%, 100% {
         transform: scale(1);
