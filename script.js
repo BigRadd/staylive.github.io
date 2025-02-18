@@ -1,3 +1,11 @@
+// Obtener el elemento de audio
+const backgroundMusic = document.getElementById('backgroundMusic');
+
+// Reproducir música en la primera interacción del usuario
+document.addEventListener('click', () => {
+    backgroundMusic.play();
+}, { once: true }); // Solo se ejecuta una vez
+
 // Función para crear puntitos de lluvia
 function createDots() {
   const numDots = 100; // Número de puntitos
